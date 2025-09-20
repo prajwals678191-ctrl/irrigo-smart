@@ -101,5 +101,40 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom utility classes */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-blue {
+    background: var(--gradient-blue);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .irrigation-pulse {
+    animation: irrigation-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes irrigation-pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .8;
+    }
   }
 }
